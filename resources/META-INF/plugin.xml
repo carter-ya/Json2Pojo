@@ -44,7 +44,7 @@
     <!-- Add your actions here -->
     <action id="Json2Pojo.generate" class="net.hexar.json2pojo.GenerateAction" icon="/icons/json.png" text="Generate POJOs from JSON"
             description="Takes a source JSON text and converts it to a set of POJOs in a directory that can be deserialized with GSON.">
-      <add-to-group group-id="GenerateGroup" anchor="last"/>
+      <add-to-group group-id="NewGroup" anchor="last"/>
     </action>
   </actions>
 

@@ -1,15 +1,15 @@
 <idea-plugin version="2">
   <id>net.hexar.json2pojo</id>
   <name>Json2Pojo</name>
-  <version>1.0.9</version>
-  <vendor email="hexar@hexar.net" url="https://github.com/HexarA/Json2Pojo">HexarA</vendor>
+  <version>1.1.0</version>
+  <vendor email="liukefeng2008@hotmail.com" url="https://github.com/liukefeng2008/Json2Pojo">刘克峰</vendor>
 
   <description><![CDATA[
       Allows for easy creation of Java POJOs from JSON, with GSON annotations and accessors. Once installed,
       just right-click on the destination package and choose "New -> Generate POJOs from JSON", then enter in your
       root class name and source JSON text.
       <br/><br/>
-      <a href="https://github.com/Hexara/Json2Pojo">Source code</a> available on GitHub.
+      <a href="https://github.com/liukefeng2008/Json2Pojo">Source code</a> available on GitHub.
     ]]></description>
 
   <change-notes><![CDATA[
@@ -23,6 +23,7 @@
       <li>1.0.7 - Sanitizing JSON property names better to remove characters that are invalid for Java identifiers.</li>
       <li>1.0.8 - Adding an option to disable using an 'm' prefix for field names.</li>
       <li>1.0.9 - Fixing parsing of nested arrays into nested Lists.</li>
+      <li>1.1.0 - Fixing the first initial letter may be capitalized.</li>
     ]]>
   </change-notes>
 
@@ -43,7 +44,7 @@
     <!-- Add your actions here -->
     <action id="Json2Pojo.generate" class="net.hexar.json2pojo.GenerateAction" icon="/icons/json.png" text="Generate POJOs from JSON"
             description="Takes a source JSON text and converts it to a set of POJOs in a directory that can be deserialized with GSON.">
-      <add-to-group group-id="NewGroup" anchor="first"/>
+      <add-to-group group-id="GenerateGroup" anchor="last"/>
     </action>
   </actions>
 

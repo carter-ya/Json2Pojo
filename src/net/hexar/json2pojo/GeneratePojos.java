@@ -7,6 +7,7 @@ import com.google.gson.annotations.SerializedName;
 import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.sun.codemodel.*;
+import java.beans.Introspector;
 import org.apache.commons.lang.StringUtils;
 import org.jboss.dna.common.text.Inflector;
 
@@ -523,7 +524,7 @@ class GeneratePojos {
         if (useMPrefix) {
             fieldName = "m" + fieldName;
         }
-        return fieldName;
+        return Introspector.decapitalize(fieldName);
     }
 
     /**
